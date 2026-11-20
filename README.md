@@ -1,11 +1,16 @@
-# Ortho Suite by Dra. Ruiz
+# Oralyn — The Future of Dental Care, Today
 
-Sitio web oficial de **Ortho Suite by Dra. Ruiz**, clínica boutique de ortodoncia de alta precisión, diseño de sonrisa y estética dental en Santo Domingo, República Dominicana.
+Sitio web oficial y landing page de alta conversión para clínica de ortodoncia digital y odontología estética avanzada.
 
-## Características de la Plataforma
-- **Diseño Editorial de Alta Gama:** Estética monocromática de lujo en blanco y negro, inspirada en editoriales de diseño y marcas premium.
-- **Header Inteligente con Animación Fluida:** Transparente al inicio del scroll, efecto cristal translúcido (*backdrop blur*) al descender, auto-ocultamiento al bajar y reaparición inmediata al subir.
-- **Slider Interactivo Antes / Después:** Comparador táctil y deslizante de transformación de sonrisa en tiempo real.
-- **Catálogo de Tratamientos:** Ortodoncia de precisión (zafiro y metálicos), diseño de sonrisa, blanqueamiento clínico, profilaxis ultrasónica, ortopedia infantil y retenedores.
-- **Agendamiento Directo por WhatsApp:** Formulario modal que canaliza pacientes y consultas directamente a WhatsApp.
-- **100% Responsivo:** Adaptado a pantallas móviles, tablets y monitores de alta resolución.
+## ✨ Características Principales
+- **Hero Section Pixel-Perfect**: Reproducción 1:1 de diseño premium con tipografía Plus Jakarta Sans, sombras suaves y micro-interacciones fluidas.
+- **Antes y Después Interactivo**: Slider táctil y deslizable para comparar la alineación dental y transformaciones de sonrisa en tiempo real.
+- **Catálogo de Tratamientos**: Alineadores invisibles, Digital Smile Design (DSD), blanqueamiento láser frío y odontopediatría.
+- **Agendamiento Directo a WhatsApp**: Modal de reserva con selección de tratamiento, fecha y horario que envía el mensaje formateado al instante.
+- **Recorrido Clínico en Video**: Modal interactivo para visualizar el protocolo de escaneo 3D iTero y tecnologías de la clínica.
+- **100% Responsive & Accesible**: Optimizado para dispositivos móviles, tablets y pantallas de escritorio grandes.
+
+## 🚀 Despliegue en Vercel
+1. Clona este repositorio o impórtalo directamente desde tu panel de [Vercel](https://vercel.com).
+2. Framework Preset: **Other** / **Static Site**.
+3. No requiere build command. El archivo de entrada es `index.html`.
