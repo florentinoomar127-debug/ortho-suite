@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ortho Suite by Dra. Ruiz | Ortodoncia Especializada & Estética Dental</title>
+  <meta name="description" content="Ortho Suite por Dra. Ruiz. Centro boutique de ortodoncia de alta precisión, diseño de sonrisa y estética dental en Santo Domingo.">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            brand: {
+              black: '#0d0d0d',
+              charcoal: '#1a1a1a',
+              dark: '#111827',
+              muted: '#71717a',
+              soft: '#f4f4f5',
+              border: '#e4e4e7',
+            }
+          },
+          boxShadow: {
+            'soft': '0 12px 30px -4px rgba(0, 0, 0, 0.04)',
+            'card': '0 2px 10px rgba(0, 0, 0, 0.03)',
+            'elevated': '0 20px 40px -10px rgba(0, 0, 0, 0.10)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      background-color: #ffffff;
+      color: #111827;
+      overflow-x: hidden;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Header: transparent at top, glass when scrolled */
+    .header-scrolled {
+      background: rgba(255, 255, 255, 0.94) !important;
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom-color: rgba(229, 231, 235, 0.85) !important;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    /* ══ Image compare (.cmp) ════════════════════════════════════════ */
+    .cmp {
+      position: relative;
+      overflow: hidden;
+      touch-action: none;
+      cursor: ew-resize;
+    }
+    .cmp__after {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      user-select: none;
+      pointer-events: none;
+    }
+    .cmp__clipper {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      width: 50%;
+      user-select: none;
+      pointer-events: none;
+    }
+    .cmp__before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: auto;
+      max-width: none;
+      object-fit: cover;
+      user-select: none;
+      pointer-events: none;
+    }
+    .cmp__line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: #ffffff;
+      transform: translateX(-50%);
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+      pointer-events: none;
+    }
+    .cmp__knob {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      border-radius: 9999px;
+      background: #ffffff;
+      color: #0d0d0d;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      transition: transform 0.15s ease;
+    }
+    .cmp:hover .cmp__knob {
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+
+    .card-luxury {
+      background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
+      border: 1px solid #f0f0f0;
+      transition: all 0.25s ease;
+    }
+    .card-luxury:hover {
+      border-color: #e4e4e7;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px -6px rgba(0,0,0,0.06);
+    }
+  </style>
+</head>
+<body class="selection:bg-neutral-900 selection:text-white">
+
+  <!-- ==================== TOP BAR ==================== -->
+  <header id="mainHeader" class="fixed top-0 left-0 right-0 z-50 w-full bg-transparent border-b border-transparent transition-all duration-300 ease-in-out">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 h-16 sm:h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+        <img src="isotype.png" alt="Ortho Suite Isotipo" class="w-8 sm:w-10 h-8 sm:h-10 object-contain group-hover:scale-105 transition-transform">
+        <div class="leading-tight">
+          <div class="flex items-baseline gap-1">
+            <span class="text-base sm:text-[21px] font-black tracking-tight text-neutral-900">Ortho<span class="font-display italic font-normal text-neutral-600">Suite</span></span>
+          </div>
+          <span class="hidden sm:block text-[9px] sm:text-[10px] font-semibold text-neutral-400 tracking-wider uppercase">By Dra. Ruiz · Ortodoncia</span>
+        </div>
+      </a>
+
+      <!-- Navigation links -->
+      <nav class="hidden md:flex items-center space-x-8 lg:space-x-10 text-[13px] font-semibold tracking-wider text-neutral-600">
+        <a href="#hero" class="hover:text-black transition-colors">INICIO</a>
+        <a href="#treatments" class="hover:text-black transition-colors">TRATAMIENTOS</a>
+        <a href="#results" class="hover:text-black transition-colors">RESULTADOS</a>
+        <a href="#about" class="hover:text-black transition-colors">DRA. RUIZ</a>
+        <a href="#faq" class="hover:text-black transition-colors">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <!-- Mobile hamburger menu -->
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-neutral-700 hover:text-black focus:outline-none" aria-label="Abrir Menú">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <button onclick="openBookingModal()" class="inline-flex items-center gap-1.5 sm:gap-2 bg-neutral-900 hover:bg-black text-white px-3.5 sm:px-6 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-bold tracking-wider transition-all shadow-sm active:scale-95">
+          <svg class="w-3 sm:w-3.5 h-3 sm:h-3.5 fill-current text-white shrink-0" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          <span class="hidden sm:inline">CONSULTAR YA</span>
+          <span class="sm:hidden font-extrabold">CONSULTAR</span>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Navigation Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-neutral-100 bg-white/95 backdrop-blur-md shadow-xl">
+      <nav class="flex flex-col px-6 py-4 space-y-3.5 text-sm font-bold text-neutral-800">
+        <a href="#hero" class="hover:text-neutral-500 transition-colors py-1" onclick="toggleMobileMenu()">INICIO</a>
+        <a href="#treatments" class="hover:text-neutral-500 transition-colors py-1" onclick="toggleMobileMenu()">TRATAMIENTOS</a>
+        <a href="#results" class="hover:text-neutral-500 transition-colors py-1" onclick="toggleMobileMenu()">RESULTADOS</a>
+        <a href="#about" class="hover:text-neutral-500 transition-colors py-1" onclick="toggleMobileMenu()">DRA. RUIZ</a>
+        <a href="#faq" class="hover:text-neutral-500 transition-colors py-1" onclick="toggleMobileMenu()">PREGUNTAS FRECUENTES</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION (FULL BLEED LUXURY EDITORIAL) ==================== -->
+  <main id="hero" class="relative w-full overflow-hidden min-h-[620px] sm:min-h-[700px] lg:min-h-[760px] flex items-center bg-white">
+    
+    <!-- Hero Background Macro Image Layer -->
+    <div class="absolute top-0 right-0 h-[440px] sm:h-full w-full sm:w-[50%] md:w-[52%] lg:w-[56%] xl:w-[60%] pointer-events-none select-none z-0 overflow-hidden block">
+      <picture class="w-full h-full block">
+        <source srcset="hero_smile_macro.webp" type="image/webp">
+        <img src="hero_smile_macro.jpg" 
+             alt="Diseño de Sonrisa - Ortho Suite by Dra. Ruiz" 
+             class="w-full h-full object-cover object-[84%_25%] sm:object-right select-none">
+      </picture>
+      
+      <!-- Seamless fade into pure white canvas on the left -->
+      <div class="absolute inset-y-0 left-0 w-44 sm:w-48 md:w-56 lg:w-72 xl:w-80 bg-gradient-to-r from-white via-white/85 sm:via-white/80 to-transparent pointer-events-none"></div>
+      
+      <!-- Gentle fade on bottom edge -->
+      <div class="absolute inset-x-0 bottom-0 h-28 sm:h-28 bg-gradient-to-t from-white via-white/90 sm:via-white/80 to-transparent pointer-events-none"></div>
+    </div>
+
+    <!-- Foreground Content Layer -->
+    <div class="relative z-10 w-full max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-16 pt-24 sm:pt-28 pb-14 sm:pb-16 lg:pb-20">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Left Column: Content -->
+        <section class="md:col-span-7 xl:col-span-6 flex flex-col justify-between py-2 sm:py-4">
+          <div class="space-y-5 sm:space-y-6 lg:space-y-7">
+            
+            <!-- Social Proof -->
+            <div class="flex items-center gap-3.5">
+              <div class="flex -space-x-2 overflow-hidden">
+                <img alt="Paciente Ortho Suite" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80">
+                <img alt="Paciente Ortho Suite" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80">
+                <img alt="Paciente Ortho Suite" class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80">
+              </div>
+              <div class="leading-tight">
+                <span class="block text-sm font-bold text-neutral-900 leading-none">4.8k+</span>
+                <span class="text-[11px] font-medium text-neutral-500">Sonrisas Alineadas</span>
+              </div>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-3xl sm:text-4xl md:text-[44px] lg:text-[52px] xl:text-[64px] font-extrabold text-neutral-900 tracking-tight pt-1" style="line-height: 1.12;">
+              Ortodoncia de Precisión<br>
+              & Sonrisas de <span class="font-display italic font-normal text-neutral-800">Alta Gama</span>.
+            </h1>
+
+            <!-- Simple, punchy CTA & Subtitle -->
+            <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-6">
+              <button onclick="openBookingModal()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-neutral-900 hover:bg-black active:scale-95 text-white font-bold text-xs sm:text-[13px] px-7 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 tracking-wider">
+                <span>AGENDAR EVALUACIÓN</span>
+                <svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+              <p class="text-xs sm:text-[13px] leading-relaxed text-neutral-500 max-w-[270px]">
+                En <strong>Ortho Suite</strong>, la <strong>Dra. Ruiz</strong> diseña tu alineación y estética dental con protocolos boutique y tecnología avanzada.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2 Luxury Feature Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 pt-4 sm:pt-8 md:pt-10 max-w-[580px]">
+            <div class="card-luxury rounded-3xl p-5 shadow-soft flex flex-col justify-between h-[150px]">
+              <div class="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center shadow-sm">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2C9.5 2 7.7 3.2 7 5.2C6.1 7.8 5.7 10 5.4 12.3c-.5 4 1 6.5 2.1 6.7.7.1 1.4-.4 2-1.3.6-.9 1.4-2.7 2.5-2.7s1.9 1.8 2.5 2.7c.6.9 1.3 1.4 2 1.3 1.1-.2 2.6-2.7 2.1-6.7-.3-2.3-.7-4.5-1.6-7.1C16.3 3.2 14.5 2 12 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-neutral-900 text-sm mb-0.5">Ortodoncia Especializada</h3>
+                <p class="text-[11px] leading-normal text-neutral-500">
+                  Brackets estéticos de zafiro y metálicos de alta precisión.
+                </p>
+              </div>
+            </div>
+
+            <div class="card-luxury rounded-3xl p-5 shadow-soft flex flex-col justify-between h-[150px]">
+              <div class="w-8 h-8 rounded-full bg-neutral-900 text-white flex items-center justify-center shadow-sm">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-neutral-900 text-sm mb-0.5">Diseño de Sonrisa</h3>
+                <p class="text-[11px] leading-normal text-neutral-500">
+                  Armonización estética personalizada a las proporciones de tu rostro.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Column: Visual Area -->
+        <section class="relative hidden md:flex md:col-span-5 xl:col-span-6 h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[560px] pointer-events-none select-none items-center justify-end">
+          <div class="absolute top-12 left-0 sm:left-4 z-20 pointer-events-none select-none text-neutral-300 animate-pulse">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
+          </div>
+          <div class="absolute bottom-16 left-6 sm:left-12 z-20 pointer-events-none select-none text-neutral-300/80 animate-pulse">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0L14.4 9.6L24 12L14.4 14.4L12 24L9.6 14.4L0 12L9.6 9.6L12 0Z"/></svg>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== TREATMENTS (MODERN SNAP SLIDER) ==================== -->
+  <section id="treatments" class="py-16 sm:py-24 border-t border-neutral-100">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12">
+        <div>
+          <span class="text-xs font-bold tracking-widest text-neutral-400 uppercase">Tratamientos de Vanguardia</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-900 tracking-tight mt-1">
+            Soluciones para una sonrisa perfecta.
+          </h2>
+        </div>
+        <p class="text-neutral-500 text-xs sm:text-sm max-w-md mt-2 md:mt-0">
+          Enfoque clínico riguroso con los más altos estándares estéticos y funcionales.
+        </p>
+      </div>
+
+      <!-- Treatments Grid / Carousel -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1: Ortodoncia Estética -->
+        <div class="card-luxury rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-neutral-900 text-white flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2C9.5 2 7.7 3.2 7 5.2C6.1 7.8 5.7 10 5.4 12.3c-.5 4 1 6.5 2.1 6.7.7.1 1.4-.4 2-1.3.6-.9 1.4-2.7 2.5-2.7s1.9 1.8 2.5 2.7c.6.9 1.3 1.4 2 1.3 1.1-.2 2.6-2.7 2.1-6.7-.3-2.3-.7-4.5-1.6-7.1C16.3 3.2 14.5 2 12 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">Ortodoncia de Precisión</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed mb-4">
+              Brackets de zafiro cristalino de máxima discreción y brackets metálicos de alto rendimiento para alineación perfecta y corrección oclusal.
+            </p>
+            <ul class="space-y-2 text-xs text-neutral-600 mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Brackets de zafiro estéticos de alta fidelidad
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Corrección de apiñamiento y mordida
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Seguimiento personalizado por Dra. Ruiz
+              </li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Ortodoncia de Precisión')" class="w-full py-3 rounded-full border border-neutral-300 hover:border-black text-neutral-900 text-xs font-bold tracking-wider hover:bg-neutral-900 hover:text-white transition-all">
+            CONSULTAR SERVICIO
+          </button>
+        </div>
+
+        <!-- Card 2: Diseño de Sonrisa -->
+        <div class="card-luxury rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-neutral-900 text-white flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">Diseño de Sonrisa & Estética</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed mb-4">
+              Armonización integral de forma, color y proporción dental para lograr una sonrisa simétrica, natural y luminosa.
+            </p>
+            <ul class="space-y-2 text-xs text-neutral-600 mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Carillas de resina estética de alta densidad
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Cierre de diastemas y contorneado dental
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Análisis facial estético personalizado
+              </li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Diseño de Sonrisa')" class="w-full py-3 rounded-full border border-neutral-300 hover:border-black text-neutral-900 text-xs font-bold tracking-wider hover:bg-neutral-900 hover:text-white transition-all">
+            CONSULTAR SERVICIO
+          </button>
+        </div>
+
+        <!-- Card 3: Blanqueamiento Clínico -->
+        <div class="card-luxury rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-neutral-900 text-white flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">Blanqueamiento Clínico</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed mb-4">
+              Aclaramiento dental profesional en consultorio. Elimina manchas profundas y restaura la luminosidad natural con protección gingival.
+            </p>
+            <ul class="space-y-2 text-xs text-neutral-600 mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Resultados visibles desde la primera sesión
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Fórmulas seguras que protegen el esmalte
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Kit de mantenimiento post-tratamiento
+              </li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Blanqueamiento Clínico')" class="w-full py-3 rounded-full border border-neutral-300 hover:border-black text-neutral-900 text-xs font-bold tracking-wider hover:bg-neutral-900 hover:text-white transition-all">
+            CONSULTAR SERVICIO
+          </button>
+        </div>
+
+        <!-- Card 4: Profilaxis & Limpieza Profunda -->
+        <div class="card-luxury rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-neutral-900 text-white flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">Profilaxis & Salud Periodontal</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed mb-4">
+              Higiene clínica con ultrasonido suave para remoción de sarro, placa bacteriana y manchas superficiales.
+            </p>
+            <ul class="space-y-2 text-xs text-neutral-600 mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Limpieza ultrasónica sin traumatismo
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Pulido dental y fluoración protectora
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Cuidado esencial para portadores de ortodoncia
+              </li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Profilaxis Dental')" class="w-full py-3 rounded-full border border-neutral-300 hover:border-black text-neutral-900 text-xs font-bold tracking-wider hover:bg-neutral-900 hover:text-white transition-all">
+            CONSULTAR SERVICIO
+          </button>
+        </div>
+
+        <!-- Card 5: Ortopedia Dentofacial Infantil -->
+        <div class="card-luxury rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-neutral-900 text-white flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">Ortopedia Dentofacial</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed mb-4">
+              Atención temprana en niños y adolescentes para guiar el crecimiento de los maxilares y evitar problemas complejos en la adultez.
+            </p>
+            <ul class="space-y-2 text-xs text-neutral-600 mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Corrección temprana de mordidas cruzadas
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Guía de erupción dental definitiva
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Aparatos ortopédicos cómodos y funcionales
+              </li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Ortopedia Dentofacial')" class="w-full py-3 rounded-full border border-neutral-300 hover:border-black text-neutral-900 text-xs font-bold tracking-wider hover:bg-neutral-900 hover:text-white transition-all">
+            CONSULTAR SERVICIO
+          </button>
+        </div>
+
+        <!-- Card 6: Retención & Mantenimiento -->
+        <div class="card-luxury rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-neutral-900 text-white flex items-center justify-center mb-6">
+              <svg class="w-6 h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">Retenedores & Control</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed mb-4">
+              Fase de estabilización post-ortodoncia con retenedores fijos y removibles para asegurar que tu sonrisa permanezca intacta por siempre.
+            </p>
+            <ul class="space-y-2 text-xs text-neutral-600 mb-6">
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Retenedores termoconformados de alta resistencia
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Retención fija lingual imperceptible
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                Citas periódicas de control y pulido
+              </li>
+            </ul>
+          </div>
+          <button onclick="openBookingModal('Retenedores')" class="w-full py-3 rounded-full border border-neutral-300 hover:border-black text-neutral-900 text-xs font-bold tracking-wider hover:bg-neutral-900 hover:text-white transition-all">
+            CONSULTAR SERVICIO
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BEFORE & AFTER SLIDER ==================== -->
+  <section id="results" class="py-16 sm:py-20 bg-neutral-900 text-white">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+        <span class="text-xs font-bold tracking-widest text-neutral-400 uppercase">Transformaciones Reales</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight mt-1 text-white">
+          El poder de una alineación perfecta.
+        </h2>
+        <p class="text-neutral-400 text-xs sm:text-sm mt-2">
+          Desliza el control interactivo para apreciar el cambio en posición, simetría y armonía dental.
+        </p>
+      </div>
+
+      <!-- Comparison Container -->
+      <div class="max-w-2xl mx-auto">
+        <div class="cmp rounded-3xl aspect-[4/3] sm:aspect-[16/10] shadow-2xl border border-neutral-800" id="caseSlider">
+          <img src="after.jpg" alt="Resultado Final - Ortho Suite" class="cmp__after">
+          <div class="cmp__clipper" id="cmpClipper">
+            <img src="before.jpg" alt="Estado Inicial - Ortho Suite" class="cmp__before" id="cmpBefore">
+          </div>
+          <div class="cmp__line" id="cmpLine"></div>
+          <div class="cmp__knob" id="cmpKnob">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+            </svg>
+          </div>
+          
+          <!-- Badges -->
+          <span class="absolute top-4 left-4 bg-black/70 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider pointer-events-none">Antes</span>
+          <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-md text-neutral-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider pointer-events-none">Después</span>
+        </div>
+        
+        <p class="text-center text-xs text-neutral-500 mt-4">
+          Caso clínico tratado con ortodoncia fija y diseño estético en Ortho Suite.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT DRA. RUIZ ==================== -->
+  <section id="about" class="py-16 sm:py-24 bg-white border-b border-neutral-100">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative max-w-sm w-full">
+            <div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-elevated border border-neutral-100 bg-neutral-100">
+              <img src="https://images.unsplash.com/photo-1594824813589-9a25b15be386?auto=format&fit=crop&w=800&q=80" alt="Dra. Ruiz - Ortho Suite" class="w-full h-full object-cover">
+            </div>
+            <!-- Floating Badge -->
+            <div class="absolute -bottom-4 -right-4 bg-neutral-900 text-white rounded-2xl p-4 shadow-xl border border-neutral-800">
+              <div class="flex items-center gap-2">
+                <span class="text-xl font-black">10+</span>
+                <span class="text-[11px] leading-tight text-neutral-300 font-semibold">Años de<br>Experiencia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <span class="text-xs font-bold tracking-widest text-neutral-400 uppercase">Dirección Médica</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight mt-1">
+              Dra. Ruiz
+            </h2>
+            <p class="text-sm font-semibold text-neutral-500 mt-1 uppercase tracking-wider">
+              Especialista en Ortodoncia & Estética Dental
+            </p>
+          </div>
+
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+            Fundadora de <strong>Ortho Suite</strong>, la <strong>Dra. Ruiz</strong> se dedica a transformar sonrisas combinando la biomecánica precisa de la ortodoncia contemporánea con un refinado sentido estético.
+          </p>
+          <p class="text-neutral-600 text-sm sm:text-base leading-relaxed">
+            Cada plan de tratamiento es rigurosamente individualizado, considerando la fisionomía, la edad y los objetivos estéticos de cada paciente en un ambiente boutique, cómodo y exclusivo.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-neutral-100">
+            <div>
+              <span class="block text-2xl font-black text-neutral-900">4,800+</span>
+              <span class="text-xs text-neutral-500 font-medium">Casos Culminados</span>
+            </div>
+            <div>
+              <span class="block text-2xl font-black text-neutral-900">100%</span>
+              <span class="text-xs text-neutral-500 font-medium">Atención Personal</span>
+            </div>
+            <div>
+              <span class="block text-2xl font-black text-neutral-900">5.0 ★</span>
+              <span class="text-xs text-neutral-500 font-medium">Valoración Pacientes</span>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <button onclick="openBookingModal('Evaluación con Dra. Ruiz')" class="inline-flex items-center gap-2 bg-neutral-900 hover:bg-black text-white px-7 py-3.5 rounded-full text-xs font-bold tracking-wider transition-all shadow-md active:scale-95">
+              <span>AGENDAR CITA CON DRA. RUIZ</span>
+              <svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 3 STEPS ==================== -->
+  <section class="py-16 sm:py-24 border-b border-neutral-100 bg-neutral-50/50">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+      
+      <div class="text-center max-w-xl mx-auto mb-12 sm:mb-16">
+        <span class="text-xs font-bold tracking-widest text-neutral-400 uppercase">Proceso Simple</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-900 tracking-tight mt-1">
+          Tu camino hacia una nueva sonrisa.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-white rounded-3xl p-8 border border-neutral-200/80 shadow-soft relative">
+          <span class="text-4xl font-black text-neutral-200 block mb-4">01</span>
+          <h3 class="text-lg font-bold text-neutral-900 mb-2">Evaluación Diagnóstica</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">
+            Examen clínico detallado, análisis fotográfico y radiográfico para definir tu plan de ortodoncia ideal.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 border border-neutral-200/80 shadow-soft relative">
+          <span class="text-4xl font-black text-neutral-200 block mb-4">02</span>
+          <h3 class="text-lg font-bold text-neutral-900 mb-2">Plan a Tu Medida</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">
+            Selección del tipo de ortodoncia (zafiro o metálicos) adaptado a tus requerimientos estéticos y ritmo de vida.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-8 border border-neutral-200/80 shadow-soft relative">
+          <span class="text-4xl font-black text-neutral-200 block mb-4">03</span>
+          <h3 class="text-lg font-bold text-neutral-900 mb-2">Sonrisa Radiante</h3>
+          <p class="text-neutral-500 text-sm leading-relaxed">
+            Controles mensuales ágiles y precisos hasta lograr la perfecta alineación y simetría deseada.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="py-16 sm:py-24 bg-white">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+      
+      <div class="text-center max-w-xl mx-auto mb-12 sm:mb-16">
+        <span class="text-xs font-bold tracking-widest text-neutral-400 uppercase">Experiencias de Pacientes</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-neutral-900 tracking-tight mt-1">
+          Lo que dicen de Ortho Suite.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="card-luxury rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex text-neutral-900 mb-4">
+              <span>★★★★★</span>
+            </div>
+            <p class="text-neutral-600 text-sm leading-relaxed italic mb-6">
+              "Llevé mi tratamiento de brackets de zafiro con la Dra. Ruiz y casi nadie notaba que los tenía. El cambio en mi mordida y mi perfil fue increíble."
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-neutral-900 text-white font-bold flex items-center justify-center text-xs">
+              CP
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-neutral-900">Camila Peña</h4>
+              <span class="text-[11px] text-neutral-400">Tratamiento de Ortodoncia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-luxury rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex text-neutral-900 mb-4">
+              <span>★★★★★</span>
+            </div>
+            <p class="text-neutral-600 text-sm leading-relaxed italic mb-6">
+              "La atención de la Dra. Ruiz es súper detallista y delicada. Me realizó un diseño de sonrisa y quedé fascinada con lo natural que se ve."
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-neutral-900 text-white font-bold flex items-center justify-center text-xs">
+              MR
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-neutral-900">Mariana Ramos</h4>
+              <span class="text-[11px] text-neutral-400">Diseño de Sonrisa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-luxury rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex text-neutral-900 mb-4">
+              <span>★★★★★</span>
+            </div>
+            <p class="text-neutral-600 text-sm leading-relaxed italic mb-6">
+              "Un ambiente sumamente profesional, pulcro y puntual. La clínica es hermosa y los resultados superaron lo que esperaba."
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-neutral-900 text-white font-bold flex items-center justify-center text-xs">
+              JL
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-neutral-900">José Luis Méndez</h4>
+              <span class="text-[11px] text-neutral-400">Ortodoncia & Profilaxis</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAQ ==================== -->
+  <section id="faq" class="py-16 sm:py-24 bg-neutral-50/50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold tracking-widest text-neutral-400 uppercase">Preguntas Frecuentes</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight mt-1">
+          Resolvemos tus dudas.
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="bg-white rounded-2xl p-5 border border-neutral-200/80 shadow-sm group">
+          <summary class="font-bold text-neutral-900 cursor-pointer list-none flex justify-between items-center text-sm sm:text-base">
+            <span>¿Cuál es la diferencia entre brackets metálicos y de zafiro?</span>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform font-bold text-xl">⌄</span>
+          </summary>
+          <p class="text-neutral-500 text-sm leading-relaxed mt-3 pt-3 border-t border-neutral-100">
+            Ambos ofrecen la misma eficacia biomecánica para alinear los dientes. Los brackets de zafiro están hechos de un cristal monocristalino transparente que no se mancha y se mimetiza con el color natural de tu diente, siendo ideales para quienes buscan máxima discreción.
+          </p>
+        </details>
+
+        <details class="bg-white rounded-2xl p-5 border border-neutral-200/80 shadow-sm group">
+          <summary class="font-bold text-neutral-900 cursor-pointer list-none flex justify-between items-center text-sm sm:text-base">
+            <span>¿Cuánto tiempo dura un tratamiento de ortodoncia?</span>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform font-bold text-xl">⌄</span>
+          </summary>
+          <p class="text-neutral-500 text-sm leading-relaxed mt-3 pt-3 border-t border-neutral-100">
+            La duración varía según la complejidad de la mordida y el apiñamiento. Generalmente oscila entre 12 y 24 meses. En tu cita de evaluación inicial con la Dra. Ruiz se proyecta el tiempo estimado exacto de tu caso.
+          </p>
+        </details>
+
+        <details class="bg-white rounded-2xl p-5 border border-neutral-200/80 shadow-sm group">
+          <summary class="font-bold text-neutral-900 cursor-pointer list-none flex justify-between items-center text-sm sm:text-base">
+            <span>¿Cómo se realiza el agendamiento y la primera consulta?</span>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform font-bold text-xl">⌄</span>
+          </summary>
+          <p class="text-neutral-500 text-sm leading-relaxed mt-3 pt-3 border-t border-neutral-100">
+            Puedes hacer clic en el botón de WhatsApp o en 'Consultar Ya'. Nuestro equipo coordinará tu cita en el horario más conveniente para tu evaluación personalizada.
+          </p>
+        </details>
+
+        <details class="bg-white rounded-2xl p-5 border border-neutral-200/80 shadow-sm group">
+          <summary class="font-bold text-neutral-900 cursor-pointer list-none flex justify-between items-center text-sm sm:text-base">
+            <span>¿Atienden a niños y adolescentes?</span>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform font-bold text-xl">⌄</span>
+          </summary>
+          <p class="text-neutral-500 text-sm leading-relaxed mt-3 pt-3 border-t border-neutral-100">
+            Sí. En Ortho Suite contamos con el área de ortopedia dentofacial para guiar el crecimiento maxilofacial de niños desde los 7 años, previniendo alteraciones graves de mordida.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== BLACK LUXURY FOOTER & CTA ==================== -->
+  <div class="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 pb-10 sm:pb-14 mt-16 sm:mt-20">
+    <footer class="bg-neutral-950 text-white rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl">
+      
+      <!-- Background subtle glow -->
+      <div class="absolute top-0 right-0 w-96 h-96 bg-neutral-800/30 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+        
+        <div class="lg:col-span-7 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="isotype_white.png" alt="Ortho Suite Isotipo" class="w-8 h-8 object-contain">
+            <span class="text-xs font-bold tracking-widest text-neutral-400 uppercase">Ortho Suite · By Dra. Ruiz</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Comienza hoy el cambio de tu sonrisa.
+          </h2>
+          <p class="text-neutral-400 text-sm sm:text-base max-w-lg leading-relaxed">
+            Agenda tu cita de valoración con la Dra. Ruiz. Te atenderemos con la privacidad, dedicación y calidez que mereces.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-4">
+          <button onclick="openBookingModal()" class="w-full inline-flex items-center justify-center gap-2 bg-white hover:bg-neutral-100 text-neutral-950 px-8 py-4 rounded-full font-bold text-xs sm:text-sm tracking-wider transition-all shadow-lg active:scale-95">
+            <span>SOLICITAR EVALUACIÓN AHORA</span>
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Details -->
+      <div class="mt-12 pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+        <div>
+          © 2026 Ortho Suite by Dra. Ruiz. Todos los derechos reservados.
+        </div>
+        <div class="flex items-center gap-6">
+          <span>Ortodoncia Especializada</span>
+          <span>•</span>
+          <span>Diseño de Sonrisa</span>
+          <span>•</span>
+          <span>Santo Domingo, R.D.</span>
+        </div>
+      </div>
+
+    </footer>
+  </div>
+
+  <!-- ==================== FLOATING CAPSULE BAR ==================== -->
+  <div class="fixed bottom-5 left-1/2 -translate-x-1/2 z-40 w-[92%] sm:w-auto max-w-lg pointer-events-auto">
+    <div class="bg-neutral-950/95 backdrop-blur-md text-white px-5 py-3 rounded-full shadow-2xl border border-neutral-800 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5 truncate">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span class="text-xs font-semibold text-neutral-300 truncate">Consultas disponibles para esta semana</span>
+      </div>
+      <button onclick="openBookingModal()" class="shrink-0 bg-white hover:bg-neutral-200 text-neutral-950 text-[11px] font-bold px-4 py-1.5 rounded-full tracking-wider transition-all active:scale-95">
+        AGENDAR
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: BOOKING ==================== -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-neutral-100">
+      
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-neutral-900 transition-colors p-1" aria-label="Cerrar modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div class="flex items-center gap-3 mb-5">
+        <img src="isotype.png" alt="Ortho Suite" class="w-8 h-8 object-contain">
+        <div>
+          <h3 class="text-lg font-extrabold text-neutral-900 leading-tight">Agendar Consulta</h3>
+          <span class="text-xs text-neutral-500 font-medium">Ortho Suite · Dra. Ruiz</span>
+        </div>
+      </div>
+
+      <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">Nombre Completo</label>
+          <input type="text" id="patientName" required placeholder="Tu nombre y apellido" class="w-full px-4 py-3 rounded-2xl border border-neutral-200 focus:border-black focus:outline-none text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">Teléfono / WhatsApp</label>
+          <input type="tel" id="patientPhone" required placeholder="Ej. 809-000-0000" class="w-full px-4 py-3 rounded-2xl border border-neutral-200 focus:border-black focus:outline-none text-sm">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-neutral-700 uppercase tracking-wider mb-1.5">Servicio de Interés</label>
+          <select id="patientService" class="w-full px-4 py-3 rounded-2xl border border-neutral-200 focus:border-black focus:outline-none text-sm bg-white">
+            <option value="Evaluación General de Ortodoncia">Evaluación General de Ortodoncia</option>
+            <option value="Ortodoncia de Precisión (Zafiro / Metálicos)">Ortodoncia de Precisión (Zafiro / Metálicos)</option>
+            <option value="Diseño de Sonrisa & Estética">Diseño de Sonrisa & Estética</option>
+            <option value="Blanqueamiento Clínico">Blanqueamiento Clínico</option>
+            <option value="Profilaxis & Salud Periodontal">Profilaxis & Salud Periodontal</option>
+            <option value="Ortopedia Dentofacial Infantil">Ortopedia Dentofacial Infantil</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full bg-neutral-900 hover:bg-black text-white font-bold text-xs py-3.5 rounded-full tracking-wider transition-all shadow-md active:scale-95 flex items-center justify-center gap-2 mt-2">
+          <span>CONTINUAR VÍA WHATSAPP</span>
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.66 20.16 9.3 19.8 8.1 19.09L7.81 18.92L4.7 19.74L5.53 16.71L5.34 16.41C4.55 15.15 4.14 13.55 4.14 11.92C4.14 7.38 7.84 3.67 12.05 3.67M9.27 7.49C9.09 7.49 8.8 7.56 8.56 7.82C8.31 8.08 7.64 8.71 7.64 10C7.64 11.29 8.58 12.53 8.71 12.7C8.84 12.87 10.56 15.53 13.18 16.66C13.8 16.93 14.29 17.09 14.67 17.21C15.29 17.41 15.86 17.38 16.31 17.32C16.81 17.24 17.85 16.69 18.06 16.08C18.28 15.48 18.28 14.97 18.21 14.86C18.15 14.75 17.98 14.69 17.72 14.56C17.46 14.43 16.19 13.8 15.96 13.72C15.72 13.63 15.55 13.59 15.38 13.85C15.21 14.11 14.72 14.69 14.57 14.86C14.42 15.03 14.27 15.05 14.01 14.92C13.75 14.79 12.92 14.52 11.93 13.64C11.16 12.96 10.64 12.11 10.49 11.85C10.34 11.59 10.47 11.45 10.6 11.32C10.72 11.2 10.87 11.01 11.01 10.85C11.15 10.69 11.2 10.57 11.29 10.39C11.38 10.22 11.33 10.07 11.27 9.94C11.2 9.81 10.7 8.59 10.49 8.08C10.28 7.59 10.07 7.65 9.91 7.64C9.76 7.64 9.58 7.64 9.41 7.64L9.27 7.49Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    // --- SMART ANIMATED HEADER: transparent at top, glass on scroll, hide on scroll down, show on scroll up ---
+    let lastScrollY = window.pageYOffset || document.documentElement.scrollTop;
+    const mainHeader = document.getElementById('mainHeader');
+
+    function updateHeader(scrollY) {
+      if (scrollY <= 60) {
+        mainHeader.classList.remove('header-scrolled', '-translate-y-full');
+      } else {
+        mainHeader.classList.add('header-scrolled');
+        if (scrollY > lastScrollY && scrollY > 120) {
+          mainHeader.classList.add('-translate-y-full');
+        } else if (scrollY < lastScrollY) {
+          mainHeader.classList.remove('-translate-y-full');
+        }
+      }
+      lastScrollY = Math.max(0, scrollY);
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const isOpening = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      if (isOpening) {
+        mainHeader.classList.add('header-scrolled');
+      } else if ((window.pageYOffset || document.documentElement.scrollTop) <= 60) {
+        mainHeader.classList.remove('header-scrolled');
+      }
+    }
+
+    // Run once on load
+    updateHeader(window.pageYOffset || document.documentElement.scrollTop);
+
+    window.addEventListener('scroll', () => {
+      updateHeader(window.pageYOffset || document.documentElement.scrollTop);
+    }, { passive: true });
+
+    // Modals
+    function openBookingModal(service = '') {
+      document.getElementById('bookingModal').classList.remove('hidden');
+      if (service) document.getElementById('patientService').value = service;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeBookingModal() {
+      document.getElementById('bookingModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    window.onclick = (e) => {
+      if (e.target === document.getElementById('bookingModal')) closeBookingModal();
+    };
+
+    function handleBookingSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('patientName').value.trim();
+      const phone = document.getElementById('patientPhone').value.trim();
+      const service = document.getElementById('patientService').value;
+
+      const clinicPhone = '18096924568';
+      const msg = `¡Hola Dra. Ruiz! Me gustaría agendar una evaluación en Ortho Suite.%0A%0A*Nombre:* ${encodeURIComponent(name)}%0A*Teléfono:* ${encodeURIComponent(phone)}%0A*Servicio:* ${encodeURIComponent(service)}`;
+      
+      window.open(`https://wa.me/${clinicPhone}?text=${msg}`, '_blank');
+      closeBookingModal();
+    }
+
+    // Interactive Before & After Slider
+    (function initSlider() {
+      const container = document.getElementById('caseSlider');
+      const clipper = document.getElementById('cmpClipper');
+      const beforeImg = document.getElementById('cmpBefore');
+      const line = document.getElementById('cmpLine');
+      const knob = document.getElementById('cmpKnob');
+
+      if (!container || !clipper || !beforeImg || !line || !knob) return;
+
+      function syncImageWidth() {
+        beforeImg.style.width = container.offsetWidth + 'px';
+      }
+
+      window.addEventListener('resize', syncImageWidth);
+      syncImageWidth();
+
+      let isDown = false;
+
+      function update(clientX) {
+        const rect = container.getBoundingClientRect();
+        let x = clientX - rect.left;
+        if (x < 0) x = 0;
+        if (x > rect.width) x = rect.width;
+        const pct = (x / rect.width) * 100;
+        clipper.style.width = pct + '%';
+        line.style.left = pct + '%';
+        knob.style.left = pct + '%';
+      }
+
+      container.addEventListener('mousedown', (e) => {
+        isDown = true;
+        update(e.clientX);
+      });
+      window.addEventListener('mouseup', () => { isDown = false; });
+      window.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        update(e.clientX);
+      });
+
+      container.addEventListener('touchstart', (e) => {
+        isDown = true;
+        update(e.touches[0].clientX);
+      }, { passive: true });
+      window.addEventListener('touchend', () => { isDown = false; });
+      window.addEventListener('touchmove', (e) => {
+        if (!isDown) return;
+        update(e.touches[0].clientX);
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
